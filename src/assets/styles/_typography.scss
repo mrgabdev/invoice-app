@@ -1,0 +1,51 @@
+// Headings
+$_h-lg: 36px;
+$_h-m: 24px;
+$_h-s: 15px;
+
+// Heading-Letter-Spacing
+$_ls-lg: -1;
+$_ls-m: -0.75;
+$_ls-s: -0.25;
+
+// Heading-Line-Height
+$_lh-lg: 33px;
+$_lh-m: 22px;
+$_lh-s: 24px;
+$_lh-sv: 15px;
+
+@mixin head-lg {
+  font-size: clamp($_h-m, 1.236rem + 1.127vw, $_h-lg);
+  letter-spacing: clamp($_ls-m, -0.041rem + -0.023vw, $_ls-lg);
+  line-height: clamp($_lh-m, 1.133rem + 1.033vw, $_lh-lg);
+}
+
+@mixin head-m {
+  font-size: clamp($_h-s, 0.739rem + 0.845vw, $_h-m);
+  letter-spacing: clamp($_ls-s, -0.005rem + -0.047vw, $_ls-m);
+  line-height: clamp($_lh-s, 1.331rem + 0.188vw, $_lh-m);
+}
+
+@mixin head-s($variant) {
+  font-size: $_h-s;
+  letter-spacing: $_ls-s;
+  @if $variant == 'v' {
+    line-height: $_lh-sv;
+  } @else {
+    line-height: $_lh-sr;
+  }
+}
+
+// Body
+$_body: 500 13px/18px;
+$_body_variant: 500 13px/15px;
+
+@mixin bodyFont {
+  font: $_body;
+  letter-spacing: -0.1;
+}
+
+@mixin bodyFontVariant {
+  font: $_body_variant;
+  letter-spacing: -0.25;
+}

@@ -1,0 +1,26 @@
+@use './theme' as theme;
+
+@mixin theme($theme) {
+  @each $property, $value in $theme {
+    #{$property}: #{$value};
+  }
+}
+
+:root {
+  @include theme(theme.$shared-variables);
+  @include theme(theme.$light-theme);
+
+  @media (prefers-color-scheme: dark) {
+    @include theme(theme.$dark-theme);
+  }
+}
+
+.light-mode {
+  @include theme(theme.$shared-variables);
+  @include theme(theme.$light-theme);
+}
+
+.dark-mode {
+  @include theme(theme.$shared-variables);
+  @include theme(theme.$dark-theme);
+}

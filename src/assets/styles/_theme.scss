@@ -1,0 +1,64 @@
+@use './colors' as colors;
+
+$shared-variables: (
+  --primary-color: #{colors.$color-01},
+  --error-color: #{colors.$color-09},
+  --error-pastel: #{colors.$color-10},
+
+  // btns
+  --btn-primary: #{colors.$color-01},
+  --btn-primary: #{colors.$color-01},
+  --btn-primary-hover: #{colors.$color-02},
+  --btn-fourth: #{colors.$colors-13},
+  --btn-fifth: #{colors.$colors-09},
+  --btn-fifth-text: #{colors.$colors-15},
+  --btn-fifth-hover: #{colors.$colors-10},
+  --btn-sixth: #{colors.$colors-11},
+  --btn-sixth-text: #{colors.$colors-07},
+  --btn-sixth-hover: #{colors.$colors-14},
+
+  // forms elements
+  --input-field-caret: #{colors.$color-01}
+);
+
+$light-theme: (
+  --bg-primary: #{colors.$color-11},
+  --bg-secondary: #{colors.$color-15},
+  --text-primary: #{colors.$color-08},
+  --text-secondary: #{colors.$color-07},
+  --summary-field: #{colors.$color-11},
+
+  // btns
+  --btn-third: #{colors.$color-11},
+  --btn-third-hover: #{colors.$colors-14},
+  --btn-third-text: #{colors.$color-07},
+  --btn-fourth-text: #{colors.$color-06},
+  --btn-fourth-hover: #{colors.$colors-08},
+
+  // form elements
+  --input-label: #{colors.$color-07},
+  --input-field: #{colors.$color-15},
+  --input-field-border: #{colors.$color-05},
+  --input-field-text: #{colors.$color-08}
+);
+
+$dark-theme: (
+  --bg-primary: #{colors.$color-12},
+  --bg-secondary: #{colors.$color-03},
+  --text-primary: #{colors.$color-15},
+  --text-secondary: #{colors.$color-05},
+  --summary-field: #{colors.$color-04},
+
+  // btns
+  --btn-third: #{colors.$color-04},
+  --btn-third-hover: #{colors.$colors-15},
+  --btn-third-text: #{colors.$color-05},
+  --btn-fourth-text: #{colors.$color-05},
+  --btn-fourth-hover: #{colors.$colors-03},
+
+  // form elements
+  --input-label: #{colors.$color-05},
+  --input-field: #{colors.$color-03},
+  --input-field-border: #{colors.$color-04},
+  --input-field-text: #{colors.$color-15}
+);
